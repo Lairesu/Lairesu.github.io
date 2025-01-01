@@ -7,41 +7,43 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
-    <body>
-        <header>
-            <nav>
-                <div class="logo">
-                    <h4>Home</h4>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <body class="scroll-smooth">
 
-<!-- Sections -->
-<section id="section1">
-    <div class="bg-emerald-500 w-52 h-52">
-        <h1>Welcome to Home</h1>
-        <p>Content for the Home section goes here.</p>
-    </div>
-</section>
+        <!-- Sections -->
+        <section id="section1" class="h-screen bg-blue-200 flex items-center justify-center">
+          <h1 class="text-4xl font-bold">Welcome To My Website</h1>
+        </section>
+      
+        <section id="section2" class="h-screen bg-green-200 flex items-center justify-center">
+          <h1 class="text-4xl font-bold">About Us</h1>
+        </section>
+      
+        <section id="section3" class="h-screen bg-yellow-200 flex items-center justify-center">
+          <h1 class="text-4xl font-bold">Projects</h1>
+        </section>
+      
+        <section id="section4" class="h-screen bg-red-200 flex items-center justify-center">
+          <h1 class="text-4xl font-bold">Contact Us</h1>
+        </section>
 
-<section id="section2">
-    <h1>About me</h1>
-    <p>Content for the About section goes here.</p>
-</section>
+<!-- navigation bar -->
 
-<section id="section3">
-    <h1>Projects</h1>
-    <p>Content for the projects section goes here.</p>
-</section>
-
-<section id="section4">
-    <h1>Contact Us</h1>
-    <p>Content for the Contact section goes here.</p>
-</section>
-
+ <!-- Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 w-full bg-gray-800 bg-opacity-60 backdrop-blur-lg text-white shadow-md z-50">
+    <ul class="flex justify-center space-x-8 py-4">
+      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transfoer transform hover:scale-105">
+        <a href="#section1" class="text-gray-300 hover:text-white">Home</a>
+      </li>
+      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transform transform hover:scale-105">
+        <a href="#section2" class="text-gray-300 hover:text-white">About</a>
+      </li>
+      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transform transform hover:scale-105">
+        <a href="#section3" class="text-gray-300 hover:text-white">Projects</a>
+      </li>
+      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transform transform hover:scale-105">
+        <a href="#section4" class="text-gray-300 hover:text-white">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</body>
 </html>
