@@ -58,6 +58,7 @@ html.light-mode .nav-link {
 
 html.light-mode .nav-link:hover {
   @apply bg-white text-gray-900;
+  box-shadow: 5px -5px 28px #0d0d0d, -5px 5px 28px #000;
 }
 
 html.light-mode .nav-link.active {
