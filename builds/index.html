@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
 
-    <body class="scroll-smooth">
+  <body class="scroll-smooth">
+    <!-- Sections -->
+    <section
+      id="section1"
+      class="h-screen bg-blue-200 flex items-center justify-center"
+    >
+      <h1 class="lol text-4xl font-bold">Welcome To My Website</h1>
+    </section>
 
-        <!-- Sections -->
-        <section id="section1" class="h-screen bg-blue-200 flex items-center justify-center">
-          <h1 class="text-4xl font-bold">Welcome To My Website</h1>
-        </section>
-      
-        <section id="section2" class="h-screen bg-green-200 flex items-center justify-center">
-          <h1 class="text-4xl font-bold">About Us</h1>
-        </section>
-      
-        <section id="section3" class="h-screen bg-yellow-200 flex items-center justify-center">
-          <h1 class="text-4xl font-bold">Projects</h1>
-        </section>
-      
-        <section id="section4" class="h-screen bg-red-200 flex items-center justify-center">
-          <h1 class="text-4xl font-bold">Contact Us</h1>
-        </section>
+    <section
+      id="section2"
+      class="h-screen bg-green-200 flex items-center justify-center"
+    >
+      <h1 class="text-4xl font-bold">About Us</h1>
+    </section>
 
-<!-- navigation bar -->
+    <section
+      id="section3"
+      class="h-screen bg-yellow-200 flex items-center justify-center"
+    >
+      <h1 class="text-4xl font-bold">Projects</h1>
+    </section>
 
- <!-- Navigation Bar -->
-  <nav class="fixed bottom-0 left-0 w-full bg-gray-800 bg-opacity-60 backdrop-blur-lg text-white shadow-md z-50">
-    <ul class="flex justify-center space-x-8 py-4">
-      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transfoer transform hover:scale-105">
-        <a href="#section1" class="text-gray-300 hover:text-white">Home</a>
-      </li>
-      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transform transform hover:scale-105">
-        <a href="#section2" class="text-gray-300 hover:text-white">About</a>
-      </li>
-      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transform transform hover:scale-105">
-        <a href="#section3" class="text-gray-300 hover:text-white">Projects</a>
-      </li>
-      <li class="hover:bg-gray-700 px-4 py-2 rounded transition-transform transform hover:scale-105">
-        <a href="#section4" class="text-gray-300 hover:text-white">Contact</a>
-      </li>
-    </ul>
-  </nav>
-</body>
+    <section
+      id="section4"
+      class="h-screen bg-red-200 flex items-center justify-center"
+    >
+      <h1 class="text-4xl font-bold">Contact Us</h1>
+    </section>
+
+    <!-- navigation bar -->
+
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-60 backdrop-blur-lg shadow-md z-50"
+    >
+      <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
+      <a href="#section2" class="nav-link"><i class="fas fa-user"></i></a>
+      <a href="#section3" class="nav-link"><i class="fas fa-briefcase"></i></a>
+      <a href="#section4" class="nav-link"><i class="fas fa-envelope"></i></a>
+      <a href="#" class="nav-link"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="nav-link"><i class="fab fa-github"></i></a>
+
+      <button id="theme-toggle" class="theme-toggle nav-link">
+        <i id="theme-icon" class="fa fa-moon"></i>
+        <!-- Default to moon(dark mode) icon -->
+      </button>
+    </nav>
+
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

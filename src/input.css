@@ -4,3 +4,62 @@
 @tailwind utilities;
 
 /* our general css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* nav styling */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.nav-link {
+  color: #fff;
+  background-color: #262626;
+  margin: 0 10px;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  transform: scale(2);
+  margin: 0 20px;
+  box-shadow: 5px -5px 28px #bababa, -5px 5px 28px #ffffff;
+}
+
+.nav-link.active {
+  @apply font-bold border-4 border-white;
+}
+
+/* light mode style */
+html.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+/* light nav-bar */
+html.light-mode nav {
+  @apply bg-white bg-opacity-60;
+}
+
+html.light-mode .nav-link {
+  @apply bg-white text-gray-800;
+}
+
+html.light-mode .nav-link:hover {
+  @apply bg-white text-gray-900;
+}
+
+html.light-mode .nav-link.active {
+  @apply border-black;
+}
