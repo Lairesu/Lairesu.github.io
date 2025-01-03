@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 /* our general css */
-
 html {
   scroll-behavior: smooth;
 }
@@ -23,12 +22,14 @@ nav {
   background-color: #262626;
   margin: 0 10px;
   padding: 15px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  transition: 0.1s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, margin 0.1s ease;
 }
 
 .nav-link:hover {
@@ -42,9 +43,31 @@ nav {
   @apply font-bold border-4 border-white;
 }
 
+/* Show hamburger menu */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+  padding: 0 7px;
+  border-radius: 20px;
+}
+.nav-toggle:hover {
+  box-shadow: 9px 9px 30px #008080, -9px -9px 30px #06539a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
 /* sections */
 
 .intro {
+  max-width: 1000px;
   margin: 100px 100px;
   border-radius: 30px;
   padding: 30px 50px;
@@ -53,10 +76,33 @@ nav {
   justify-content: center;
   gap: 50px;
 }
-.social-links,
-a {
-  font-size: 20px;
-  margin: 10px 2px;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Individual Social Button Styling */
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover Effect */
+.social-button:hover {
+  background-color: #008080;
+  transform: scale(1.5);
+  box-shadow: 5px 5px 25px #008080, -5px -5px 25px #06539a;
 }
 .img {
   margin-top: 35px;
@@ -67,10 +113,30 @@ a {
 }
 .img img {
   border-radius: 30px;
+  height: auto;
+  width: auto;
+}
+
+.skills {
+  border-radius: 30px;
+  box-shadow: 9px 9px 30px #008080, -9px -9px 30px #06539a;
+}
+.skill-button {
+  @apply px-6 py-3 rounded-lg text-white font-medium transition-colors duration-300 ease-in-out;
+}
+.skill-button:hover {
+  @apply bg-teal-600;
+}
+.skill-button:focus {
+  @apply outline-none ring-2 ring-teal-400;
+}
+
+/* Columns style */
+.skill-column {
+  @apply flex flex-col gap-4;
 }
 
 /* light mode style */
-
 /* light nav-bar */
 html.light-mode nav {
   @apply bg-white bg-opacity-30;
@@ -92,6 +158,64 @@ html.light-mode .nav-link.active {
 html.light-mode .intro {
   @apply bg-white text-gray-950;
 }
-html.light-mode .intro p{
+html.light-mode .intro p {
   @apply text-gray-800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+  }
+
+  .img {
+    margin-top: 20px;
+    margin-left: 0;
+    max-width: 200px;
+    margin-left: 230px;
+  }
+
+  .nav-link {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .intro {
+    margin: 20px;
+    margin-top: none;
+    padding: 20px;
+  }
+
+  .img {
+    margin-top: 20px;
+    margin-left: 0;
+    max-width: auto;
+    margin-left: 80px;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when toggled */
+  }
+
+  .nav-toggle {
+    display: block; /* Show hamburger menu */
+  }
 }

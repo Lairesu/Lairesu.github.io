@@ -31,13 +31,13 @@
 
           <!-- social links -->
           <div class="social-links">
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://facebook.com" target="_blank" class="social-button">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank">
+            <a href="https://linkedin.com" target="_blank" class="social-button">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://twitter.com" target="_blank">
+            <a href="https://twitter.com" target="_blank" class="social-button">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
           </div>
@@ -49,18 +49,12 @@
         </div>
       </div>
       <!-- end of intro -->
-
-      <div class="skills">
-        <h1>Tech Skills</h1>
-      </div>
     </section>
 
     <section
       id="section2"
       class="h-screen bg-gray-900 flex items-center justify-center"
-    >
-      <h1 class="text-4xl font-bold">About Us</h1>
-    </section>
+    ></section>
 
     <section
       id="section3"
@@ -82,17 +76,21 @@
     <nav
       class="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-60 backdrop-blur-lg shadow-md z-50"
     >
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links">
       <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
       <a href="#section2" class="nav-link"><i class="fas fa-user"></i></a>
       <a href="#section3" class="nav-link"><i class="fas fa-briefcase"></i></a>
       <a href="#section4" class="nav-link"><i class="fas fa-envelope"></i></a>
-      <a href="#" class="nav-link"><i class="fab fa-linkedin"></i></a>
       <a href="#" class="nav-link"><i class="fab fa-github"></i></a>
 
       <button id="theme-toggle" class="theme-toggle nav-link">
         <i id="theme-icon" class="fa fa-moon"></i>
         <!-- Default to moon(dark mode) icon -->
       </button>
+    </div>
     </nav>
 
     <script src="js/scripts.js"></script>
