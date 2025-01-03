@@ -570,12 +570,28 @@ video {
   z-index: 50;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .-translate-x-1\/2 {
@@ -623,13 +639,51 @@ video {
   --tw-bg-opacity: 0.6;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .shadow-md {
@@ -687,18 +741,43 @@ nav {
   font-weight: 700;
 }
 
-/* light mode style */
+/* sections */
 
-html.light-mode {
-  background-color: #fff;
-  color: #333;
+.intro {
+  margin: 100px 100px;
+  border-radius: 30px;
+  padding: 30px 50px;
+  box-shadow: 9px 9px 30px #008080, -9px -9px 30px #06539a;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
+
+.social-links,
+a {
+  font-size: 20px;
+  margin: 10px 2px;
+}
+
+.img {
+  margin-top: 35px;
+  border-radius: 30px;
+  box-shadow: 9px 9px 30px #06539a, -9px -9px 30px #06539a;
+  height: 200px;
+  width: 200px;
+}
+
+.img img {
+  border-radius: 30px;
+}
+
+/* light mode style */
 
 /* light nav-bar */
 
 html.light-mode nav {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-  --tw-bg-opacity: 0.6;
+  --tw-bg-opacity: 0.3;
 }
 
 html.light-mode .nav-link {
@@ -719,4 +798,16 @@ html.light-mode .nav-link:hover {
 html.light-mode .nav-link.active {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
+html.light-mode .intro {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(3 7 18 / var(--tw-text-opacity, 1));
+}
+
+html.light-mode .intro p {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }

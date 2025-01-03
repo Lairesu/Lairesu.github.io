@@ -42,14 +42,38 @@ nav {
   @apply font-bold border-4 border-white;
 }
 
-/* light mode style */
-html.light-mode {
-  background-color: #fff;
-  color: #333;
+/* sections */
+
+.intro {
+  margin: 100px 100px;
+  border-radius: 30px;
+  padding: 30px 50px;
+  box-shadow: 9px 9px 30px #008080, -9px -9px 30px #06539a;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
+.social-links,
+a {
+  font-size: 20px;
+  margin: 10px 2px;
+}
+.img {
+  margin-top: 35px;
+  border-radius: 30px;
+  box-shadow: 9px 9px 30px #06539a, -9px -9px 30px #06539a;
+  height: 200px;
+  width: 200px;
+}
+.img img {
+  border-radius: 30px;
+}
+
+/* light mode style */
+
 /* light nav-bar */
 html.light-mode nav {
-  @apply bg-white bg-opacity-60;
+  @apply bg-white bg-opacity-30;
 }
 
 html.light-mode .nav-link {
@@ -63,4 +87,11 @@ html.light-mode .nav-link:hover {
 
 html.light-mode .nav-link.active {
   @apply border-black;
+}
+
+html.light-mode .intro {
+  @apply bg-white text-gray-950;
+}
+html.light-mode .intro p{
+  @apply text-gray-800;
 }
