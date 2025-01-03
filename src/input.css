@@ -35,7 +35,7 @@ nav {
   color: #fff;
   transform: scale(2);
   margin: 0 20px;
-  box-shadow: 5px -5px 28px #bababa, -5px 5px 28px #ffffff;
+  box-shadow: 5px -5px 28px #f1f1f1, -5px 5px 28px #ffffff;
 }
 
 .nav-link.active {

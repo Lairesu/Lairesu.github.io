@@ -624,6 +624,21 @@ video {
   background-color: rgb(254 240 138 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
@@ -682,7 +697,7 @@ nav {
   color: #fff;
   transform: scale(2);
   margin: 0 20px;
-  box-shadow: 5px -5px 28px #bababa, -5px 5px 28px #ffffff;
+  box-shadow: 5px -5px 28px #f1f1f1, -5px 5px 28px #ffffff;
 }
 
 .nav-link.active {
