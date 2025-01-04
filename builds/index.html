@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Raj Rai</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,7 +15,7 @@
   <body class="scroll-smooth">
     <section
       id="section1"
-      class="h-screen bg-gray-950 flex items-center justify-center"
+      class="h-screen flex items-center justify-center"
     >
       <div class="intro text-white bg-gray-900">
         <div class="max-w-2xl">
@@ -28,18 +28,27 @@
             I am currently focusing on building my career in the exciting and
             dynamic field of full stack development.
           </p>
-
           <!-- social links -->
           <div class="social-links">
-            <a href="https://facebook.com" target="_blank" class="social-button">
+            <div class="line"></div>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="social-button"
+            >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" class="social-button">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="social-button"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a href="https://twitter.com" target="_blank" class="social-button">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
+            <div class="line"></div>
           </div>
         </div>
 
@@ -51,20 +60,54 @@
       <!-- end of intro -->
     </section>
 
-    <section
-      id="section2"
-      class="h-screen bg-gray-900 flex items-center justify-center"
-    ></section>
-
+    <section id="section2" class="py-5">
+      <p class="my-techs text-gray-200">MY TECH STACKS</p>
+      <p class="explain text-gray-300">These are the technologies I am proficient at and use them to meticulously transform my innovative ideas into impactful and high-quality digital solutions.</p>
+      
+      <div class="skills grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+        <button class="skill-button">
+          <img class="tech-img" src="images/frontend.png" alt="Frontend" />
+          <p class="Head">Frontend</p>
+        </button>
+        <button class="skill-button">
+          <img class="tech-img" src="images/backend.png" alt="Frontend" />
+          <p class="Head">Backend</p>
+        </button>
+        <button class="skill-button">
+          <img class="tech-img" src="images/database.png" alt="Databases" />
+          <p class="Head">Databases</p>
+        </button>
+        <button class="skill-button">
+          <img class="tech-img" src="images/coding.png" alt="other Languages" />
+          <p class="Head">Languages</p>
+        </button>
+        <button class="skill-button">
+          <img class="tech-img" src="images/miscs.png" alt="other Languages" />
+          <p class="Head">Miscs</p>
+        </button>
+        <button class="skill-button">
+          <img class="tech-img" src="images/learning.png" alt="other Languages" />
+          <p class="Head">Learning</p>
+        </button>
+      </div>
+    </section>
+    
     <section
       id="section3"
       class="h-screen bg-gray-800 flex items-center justify-center"
     >
-      <h1 class="text-4xl font-bold">Projects</h1>
+      <h1 class="text-4xl font-bold">About Me</h1>
     </section>
 
     <section
       id="section4"
+      class="h-screen bg-gray-700 flex items-center justify-center"
+    >
+      <h1 class="text-4xl font-bold">projects</h1>
+    </section>
+
+    <section
+      id="section5"
       class="h-screen bg-gray-700 flex items-center justify-center"
     >
       <h1 class="text-4xl font-bold">Contact Us</h1>
@@ -76,21 +119,23 @@
     <nav
       class="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-60 backdrop-blur-lg shadow-md z-50"
     >
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links">
-      <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
-      <a href="#section2" class="nav-link"><i class="fas fa-user"></i></a>
-      <a href="#section3" class="nav-link"><i class="fas fa-briefcase"></i></a>
-      <a href="#section4" class="nav-link"><i class="fas fa-envelope"></i></a>
-      <a href="#" class="nav-link"><i class="fab fa-github"></i></a>
-
-      <button id="theme-toggle" class="theme-toggle nav-link">
-        <i id="theme-icon" class="fa fa-moon"></i>
-        <!-- Default to moon(dark mode) icon -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
       </button>
-    </div>
+      <div class="nav-links">
+        <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
+        <a href="#section3" class="nav-link"><i class="fas fa-user"></i></a>
+        <a href="#section4" class="nav-link"
+          ><i class="fas fa-briefcase"></i
+        ></a>
+        <a href="#section5" class="nav-link"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-github"></i></a>
+
+        <button id="theme-toggle" class="theme-toggle nav-link">
+          <i id="theme-icon" class="fa fa-moon"></i>
+          <!-- Default to moon(dark mode) icon -->
+        </button>
+      </div>
     </nav>
 
     <script src="js/scripts.js"></script>
