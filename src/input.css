@@ -174,31 +174,39 @@ html.light-mode .intro p {
     margin-top: 20px;
     margin-left: 0;
     max-width: 200px;
-    margin-left: 230px;
+    align-self: center; /* Center image below the content */
   }
 
-  .nav-link {
-    padding: 10px;
+  @media (min-width: 768px) {
+    .intro {
+      flex-direction: row; /* Start moving the image to the side */
+      justify-content: space-between;
+    }
+
+    .img {
+      margin-top: 0;
+      margin-left: 20px; /* Gradual movement to the right */
+      align-self: flex-start; /* Align to the top of the section */
+    }
   }
 }
 
 @media (max-width: 720px) {
   .intro {
     margin: 20px;
-    margin-top: none;
     padding: 20px;
   }
 
   .img {
     margin-top: 20px;
-    margin-left: 0;
-    max-width: auto;
-    margin-left: 80px;
+    margin-left: auto; /* Center the image below */
+    margin-right: auto;
+    display: block; /* Ensure it's below the content */
   }
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .nav-links {
     display: none; /* Hidden by default */
     flex-direction: column;
@@ -209,6 +217,9 @@ html.light-mode .intro p {
     transform: translateX(-50%);
     padding: 20px;
     z-index: 1000;
+    background-color: #000;
+    border-radius: 50px;
+    opacity: 90%;
   }
 
   .nav-links.show {
