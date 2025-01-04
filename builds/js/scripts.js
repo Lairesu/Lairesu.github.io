@@ -51,7 +51,7 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light") {
   enableLightMode();
 } else {
-  enableDarkMode();  // Default mode
+  enableDarkMode(); // Default mode
 }
 
 // event listener for the theme toggle button click
@@ -63,13 +63,38 @@ themeToggleButton.addEventListener("click", () => {
   }
 });
 
-
-
-
 // nav-bar responsive
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 navToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
+});
+
+// modal
+document.addEventListener("click", function (e) {
+  const target = e.target.closest("[data-modal-target]");
+  if (target) {
+    const modalId = target.getAttribute("data-modal-target");
+    const modal = document.getElementById(modalId);
+    modal.classList.remove("invisible", "opacity-0", "pointer-events-none");
+    modal.classList.add("visible", "opacity-100", "pointer-events-auto");
+  }
+});
+
+// close modal
+document.addEventListener("click", function (e) {
+  const closeBtn = e.target.closest(".close-modal");
+  if (closeBtn) {
+    const modal = closeBtn.closest(".modal");
+    modal.classList.remove("visible", "opacity-100", "pointer-events-auto");
+    modal.classList.add("invisible", "opacity-0", "pointer-events-none");
+  }
+
+  const backgroundClick =
+    e.target.classList.contains("fixed") && !e.target.closest(".bg-white");
+  if (backgroundClick) {
+    e.target.classList.add("invisible", "opacity-0", "pointer-events-none");
+    e.target.classList.remove("visible", "opacity-100", "pointer-events-auto");
+  }
 });

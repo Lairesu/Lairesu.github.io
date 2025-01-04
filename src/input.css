@@ -203,8 +203,6 @@ nav {
   box-shadow: 5px 5px 25px #008080, -5px -5px 25px #06539a;
 }
 
-/* light mode style */
-/* light nav-bar */
 /* Light mode styles */
 html.light-mode {
   --background-color: #ffffff;

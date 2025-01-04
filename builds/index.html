@@ -13,10 +13,7 @@
   </head>
 
   <body class="scroll-smooth">
-    <section
-      id="section1"
-      class="h-screen flex items-center justify-center"
-    >
+    <section id="section1" class="h-screen flex items-center justify-center">
       <div class="intro text-white bg-gray-900">
         <div class="max-w-2xl">
           <p class="text-lg mb-4 text-gray-300">Hello There,</p>
@@ -62,36 +59,65 @@
 
     <section id="section2" class="py-5">
       <p class="my-techs text-gray-200">MY TECH STACKS</p>
-      <p class="explain text-gray-300">These are the technologies I am proficient at and use them to meticulously transform my innovative ideas into impactful and high-quality digital solutions.</p>
-      
-      <div class="skills grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
-        <button class="skill-button">
+      <p class="explain text-gray-300">
+        These are the technologies I am proficient at and use them to
+        meticulously transform my innovative ideas into impactful and
+        high-quality digital solutions.
+      </p>
+
+      <div
+        class="skills grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5"
+      >
+        <button class="skill-button" data-modal-target="frontendModal">
           <img class="tech-img" src="images/frontend.png" alt="Frontend" />
           <p class="Head">Frontend</p>
         </button>
-        <button class="skill-button">
+        <button class="skill-button" data-modal-target="backendModal">
           <img class="tech-img" src="images/backend.png" alt="Frontend" />
           <p class="Head">Backend</p>
         </button>
-        <button class="skill-button">
+        <button class="skill-button" data-modal-target="databaseModal">
           <img class="tech-img" src="images/database.png" alt="Databases" />
           <p class="Head">Databases</p>
         </button>
-        <button class="skill-button">
+        <button class="skill-button" data-modal-target="languagesModal">
           <img class="tech-img" src="images/coding.png" alt="other Languages" />
           <p class="Head">Languages</p>
         </button>
-        <button class="skill-button">
+        <button class="skill-button" data-modal-target="miscsModal">
           <img class="tech-img" src="images/miscs.png" alt="other Languages" />
           <p class="Head">Miscs</p>
         </button>
-        <button class="skill-button">
-          <img class="tech-img" src="images/learning.png" alt="other Languages" />
+        <button class="skill-button" data-modal-target="LearningModal">
+          <img
+            class="tech-img"
+            src="images/learning.png"
+            alt="other Languages"
+          />
           <p class="Head">Learning</p>
         </button>
       </div>
-    </section>
     
+      <!-- Modals -->
+      <!-- Frontend Modal -->
+      <div id="frontendModal" class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+        <div class="bg-white p-6 shadow-md max-w-sm w-full">
+          <h2 class="text-lg font-bold mb-4">Frontend</h2>
+          <button class="close-modal bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+            Close
+          </button>
+          <button>HTML</button>
+          <button>CSS3</button>
+          <button>JavaScript</button>
+          <button>Bootstrap</button>
+          <button>Tailwind</button>
+          <button>React.js</button>
+        </div>
+      </div>      
+    </section>
+
+    
+    <!-- section3 -->
     <section
       id="section3"
       class="h-screen bg-gray-800 flex items-center justify-center"
