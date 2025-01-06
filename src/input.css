@@ -6,6 +6,7 @@
 /* our general css */
 html {
   scroll-behavior: smooth;
+  font-family: "Chicle", serif;
 }
 :root {
   --background-color: #000000;
@@ -40,15 +41,14 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 30px;
 }
 
 .nav-link {
   color: #fff;
   background-color: #262626;
-  margin: 0 10px;
-  padding: 15px;
+  margin: 10px 10px;
+  padding: 10px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -148,15 +148,12 @@ nav {
   width: auto;
 }
 /* section2 */
-#section2 {
-  padding: 20px 0;
-}
-.my-techs {
+.heading {
+  font-family: "Italianno", serif;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
 }
-.section2,
 .explain {
   font-size: 18px;
   text-align: center;
@@ -203,6 +200,91 @@ nav {
   box-shadow: 5px 5px 25px #008080, -5px -5px 25px #06539a;
 }
 
+.tech-list {
+  max-width: 500px;
+  max-height: auto;
+  border-radius: 20px;
+  background-color: #374151;
+}
+.header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.brand-name {
+  color: #fff;
+  margin-top: 15px;
+}
+
+.tech-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px 20px;
+  gap: 20px;
+}
+.tech-btn {
+  font-size: 20px;
+  justify-content: center;
+  height: 80px;
+  display: flex;
+  background-color: #1f2937;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid gray;
+}
+.tech-btn:hover {
+  border: 1px solid white;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 25px #008080, -5px -5px 25px #06539a;
+}
+
+.tech-icon {
+  height: auto;
+  width: 30px;
+}
+
+/* about me */
+.my-box {
+  display: flex;
+  gap: 50px;
+  text-align: center;
+  justify-content: center;
+  padding: 40px 70px;
+}
+.about-myself {
+  margin-top: 200px;
+  font-size: 20px;
+  color: white;
+  max-width: 600px;
+  font-weight: bold;
+}
+.rand-img img {
+  max-width: 450px;
+  background-color: #374151;
+  box-shadow: 5px 5px 25px #008080, -5px -5px 25px #06539a;
+}
+.unsplash {
+  padding: 10px;
+  color: #fff;
+}
+.unsplash:hover {
+  color: yellow;
+}
+
+/* section 4 */
+
+
+
 /* Light mode styles */
 html.light-mode {
   --background-color: #ffffff;
@@ -234,93 +316,9 @@ html.light-mode .intro p {
 html.light-mode .explain {
   @apply text-black;
 }
-html.light-mode .my-techs {
+html.light-mode .heading {
   @apply text-black;
 }
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .intro {
-    flex-direction: column;
-    margin: 50px;
-    padding: 20px;
-  }
-
-  .img {
-    margin-top: 20px;
-    margin-left: 0;
-    max-width: 200px;
-    align-self: center;
-  }
-}
-
-@media (min-width: 768px) {
-  .intro {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .img {
-    margin-top: 0;
-    margin-left: 20px; /* Gradual movement to the right */
-    align-self: flex-start; /* Align to the top of the section */
-  }
-}
-
-@media (max-width: 720px) {
-  .intro {
-    margin: 20px;
-    padding: 20px;
-  }
-
-  .img {
-    margin-top: 20px;
-    margin-left: auto; /* Center the image below */
-    margin-right: auto;
-    display: block; /* Ensure it's below the content */
-  }
-  .nav-links {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px;
-    z-index: 1000;
-    background-color: #000;
-    border-radius: 50px;
-    opacity: 90%;
-  }
-
-  .nav-links.show {
-    display: flex; /* Show when toggled */
-  }
-
-  .nav-toggle {
-    display: block; /* Show hamburger menu */
-  }
-}
-
-@media (max-width: 1200px) {
-  .skills {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
-  }
-}
-
-@media (max-width: 900px) {
-  .skills {
-    margin-left: 100px;
-    margin-right: 10px;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
-  }
-}
-
-@media (max-width: 600px) {
-  .skills {
-    margin-left: 10px;
-    margin-right: 10px;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for smallest screens */
-  }
+html.light-mode .about-myself {
+  @apply text-black;
 }
