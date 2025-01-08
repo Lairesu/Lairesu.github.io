@@ -3,61 +3,468 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Raj Rai</title>
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&family=Italianno&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/src/animation.css" />
+    <link rel="stylesheet" type="text/css" href="/src/responsive.css" />
   </head>
 
   <body class="scroll-smooth">
-    <!-- Sections -->
     <section
       id="section1"
-      class="h-screen bg-blue-200 flex items-center justify-center"
+      class="h-screen flex items-center justify-center animate-fade-in"
     >
-      <h1 class="lol text-4xl font-bold">Welcome To My Website</h1>
+      <div class="animate slideInLeft intro text-white bg-gray-900">
+        <div class="max-w-2xl">
+          <p class="text-lg mb-4 text-gray-300">Hello There,</p>
+          <h1 class="text-5xl font-extrabold mb-2">I'm Raj Rai</h1>
+          <h3 class="text-2xl font-semibold mb-6">A Passionate Programmer</h3>
+          <p class="text-lg text-gray-400">
+            I’m a software engineer, and as my expertise, I do much more than
+            just create websites. I design and develop games, software systems
+            and applications across different platforms and purposes.
+          </p>
+          <!-- social links -->
+          <div class="social-links">
+            <div class="line"></div>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="social-button"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/raj-rai-8445042ba/"
+              target="_blank"
+              class="social-button"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://x.com/LairesuRai"
+              target="_blank"
+              class="social-button"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <!-- img -->
+        <div class="animate slideInRight img">
+          <img src="images/raj.png" alt="Raj Rai" />
+        </div>
+      </div>
+      <!-- end of intro -->
     </section>
 
-    <section
-      id="section2"
-      class="h-screen bg-green-200 flex items-center justify-center"
-    >
-      <h1 class="text-4xl font-bold">About Us</h1>
+    <section id="section2" class="h-screen">
+      <p class="heading text-gray-200">MY TECH STACKS</p>
+      <p class="explain text-gray-300">
+        These are the technologies I am proficient at and use them to
+        meticulously transform my innovative ideas into impactful and
+        high-quality digital solutions.
+      </p>
+
+      <div
+        class="skills grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5"
+      >
+        <button class="skill-button" data-modal-target="frontendModal">
+          <img class="tech-img" src="images/frontend.png" alt="Frontend" />
+          <p class="Head">Frontend</p>
+        </button>
+        <button class="skill-button" data-modal-target="backendModal">
+          <img class="tech-img" src="images/backend.png" alt="Frontend" />
+          <p class="Head">Backend</p>
+        </button>
+        <button class="skill-button" data-modal-target="databaseModal">
+          <img class="tech-img" src="images/database.png" alt="Databases" />
+          <p class="Head">Databases</p>
+        </button>
+        <button class="skill-button" data-modal-target="languagesModal">
+          <img class="tech-img" src="images/coding.png" alt="other Languages" />
+          <p class="Head">Languages</p>
+        </button>
+        <button class="skill-button" data-modal-target="miscsModal">
+          <img class="tech-img" src="images/miscs.png" alt="other Languages" />
+          <p class="Head">Miscs</p>
+        </button>
+        <button class="skill-button" data-modal-target="LearningModal">
+          <img
+            class="tech-img"
+            src="images/learning.png"
+            alt="other Languages"
+          />
+          <p class="Head">Learning</p>
+        </button>
+      </div>
+
+      <!-- Modals -->
+      <!-- Frontend Modal -->
+      <div
+        id="frontendModal"
+        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
+      >
+        <div class="tech-list bg-white shadow-md max-w-sm w-full">
+          <div class="header px-2 py-2 bg-blue-600">
+            <div class="header-left">
+              <img class="tech-img" src="images/frontend.png" alt="Frontend" />
+              <h2 class="brand-name text-lg font-bold mb-4">Frontend</h2>
+            </div>
+            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+          </div>
+          <div class="tech-btns">
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/html.png" alt="html" class="tech-icon" />
+              <span>HTML</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/css-3.png" alt="css" class="tech-icon" />
+              <span>CSS3</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/js.png" alt="JavaScript" class="tech-icon" />
+              <span>JavaScript</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img
+                src="Images/bootstrap.png"
+                alt="bootstrap"
+                class="tech-icon"
+              />
+              <span>Bootstrap</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/tailwind.png" alt="tailwind" class="tech-icon" />
+              <span>Tailwind</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/reactjs.png" alt="react" class="tech-icon" />
+              <span>React.js</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- backend -->
+      <div
+        id="backendModal"
+        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
+      >
+        <div class="tech-list bg-white shadow-md max-w-sm w-full">
+          <div class="header px-2 py-2 bg-green-700">
+            <div class="header-left">
+              <img class="tech-img" src="images/backend.png" alt="Backend" />
+              <h2 class="brand-name text-lg font-bold mb-4">Backend</h2>
+            </div>
+            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+          </div>
+          <div class="tech-btns">
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/django.svg" alt="django" class="tech-icon" />
+              <span>Django</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img
+                src="Images/flask.svg"
+                alt="flask"
+                class="tech-icon text-white"
+              />
+              <span>Flask</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/node-js.svg" alt="nodejs" class="tech-icon" />
+              <span>Node.js</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- database -->
+      <div
+        id="databaseModal"
+        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
+      >
+        <div class="tech-list bg-white shadow-md max-w-sm w-full">
+          <div class="header px-2 py-2 bg-yellow-500">
+            <div class="header-left">
+              <img class="tech-img" src="images/database.png" alt="Databases" />
+              <h2 class="brand-name text-lg font-bold mb-4">Databases</h2>
+            </div>
+            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+          </div>
+          <div class="tech-btns">
+            <button class="tech-btn flex items-center space-x-2">
+              <img
+                src="Images/postgresql.svg"
+                alt="postgresql"
+                class="tech-icon"
+              />
+              <span>PostgreSQL</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/sqlite.svg" alt="SQLite3" class="tech-icon" />
+              <span>SQLite3</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div
+        id="languagesModal"
+        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
+      >
+        <div class="tech-list bg-white shadow-md max-w-sm w-full">
+          <div class="header px-2 py-2 bg-red-500">
+            <div class="header-left">
+              <img
+                class="tech-img"
+                src="images/coding.png"
+                alt="other Languages"
+              />
+              <h2 class="brand-name text-lg font-bold mb-4">Languages</h2>
+            </div>
+            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+          </div>
+          <div class="tech-btns">
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/python.svg" alt="python" class="tech-icon" />
+              <span>python</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/c-original.svg" alt="C" class="tech-icon" />
+              <span>C</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/c++.svg" alt="C++" class="tech-icon" />
+              <span>C++</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Miscs -->
+      <div
+        id="miscsModal"
+        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
+      >
+        <div class="tech-list bg-white shadow-md max-w-sm w-full">
+          <div class="header px-2 py-2 bg-blue-500">
+            <div class="header-left">
+              <img
+                class="tech-img"
+                src="images/miscs.png"
+                alt="Miscellaneous"
+              />
+              <h2 class="brand-name text-lg font-bold mb-4">Miscs</h2>
+            </div>
+            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+          </div>
+          <div class="tech-btns">
+            <button class="tech-btn flex items-center space-x-2">
+              <img
+                src="Images/visual-studio-code.svg"
+                alt="Vscode"
+                class="tech-icon"
+              />
+              <span>Visual Studio</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/pycharm.svg" alt="pycharm" class="tech-icon" />
+              <span>Pycharm</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/asperite.svg" alt="asperite" class="tech-icon" />
+              <span>Asperite</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning -->
+      <div
+        id="LearningModal"
+        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
+      >
+        <div class="tech-list bg-white shadow-md max-w-sm w-full">
+          <div class="header px-2 py-2 bg-blue-700">
+            <div class="header-left">
+              <img class="tech-img" src="images/learning.png" alt="learning" />
+              <h2 class="brand-name text-lg font-bold mb-4">Learning</h2>
+            </div>
+            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+          </div>
+          <div class="tech-btns">
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/Go.svg" alt="Golang" class="tech-icon" />
+              <span>Golang</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/c-sharp.svg" alt="c#" class="tech-icon" />
+              <span>C#</span>
+            </button>
+            <button class="tech-btn flex items-center space-x-2">
+              <img src="Images/MongoDB.svg" alt="MongoDB" class="tech-icon" />
+              <span>MongoDB</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section
-      id="section3"
-      class="h-screen bg-yellow-200 flex items-center justify-center"
-    >
-      <h1 class="text-4xl font-bold">Projects</h1>
+    <!-- section3 -->
+    <section id="section3" class="h-screen animate-fade-in">
+      <h1 class="heading text-white">About Me</h1>
+      <div class="my-box">
+        <p class="about-myself">
+          I started programming more than two and a half years ago for fun. The
+          hobby of developing games, sites, and applications turned out to be my
+          driving force.<br />
+          Gradually, it dawned on me that my love for coding need not be merely
+          a hobby. Before the end of high school, I chose to pursue Software
+          Development professionally, promising myself that I will build my
+          skill sets and move upward in this field.
+        </p>
+        <div class="rand-img">
+          <img src="Images/new.jpg" />
+          <a
+            href="https://unsplash.com/photos/the-tops-of-trees-against-a-blue-sky-mEKxZagJ9J8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            class="unsplash"
+            >Image-Source: Unsplash</a
+          >
+        </div>
+      </div>
     </section>
 
-    <section
-      id="section4"
-      class="h-screen bg-red-200 flex items-center justify-center"
-    >
-      <h1 class="text-4xl font-bold">Contact Us</h1>
+    <section id="section4" class="h-screen">
+      <h1 class="heading text-white">My Works</h1>
+
+      <div class="Card-box bg-gray-900">
+        <div class="cards">
+          <div class="project-imgs">
+            <img class="project-img" src="Images/projects/Blog.png" />
+          </div>
+          <div class="about-project">
+            <div class="project-description">
+              <h2 class="text-white">HackTales</h2>
+              <h3 class="text-gray-200">A Blog Website/Web App</h3>
+              <a
+                href="https://github.com/Lairesu/Blog-Application"
+                class="github-link text-teal-400"
+                >Source Code <i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="project-imgs">
+            <img class="project-img" src="Images/projects/sort.gif" />
+          </div>
+          <div class="about-project">
+            <div class="project-description">
+              <h2 class="text-white">Algorithm Sorter</h2>
+              <h3 class="text-gray-200">Python, Pygame</h3>
+              <a
+                href="https://github.com/Lairesu/Sorting-Algorithm-Visualizer?tab=readme-ov-file"
+                class="github-link text-teal-400"
+                >Source Code <i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="project-imgs">
+            <img class="project-img" src="Images/projects/cs50-final.png" />
+          </div>
+          <div class="about-project">
+            <div class="project-description">
+              <h2 class="text-white">CodeFlow</h2>
+              <h3 class="text-gray-200">Cs50 final Project using Flask</h3>
+              <a
+                href="https://github.com/Lairesu/final-project-2024"
+                class="github-link text-teal-400"
+                >Source Code <i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section5" class="h-screen">
+      <h1 class="heading text-white py-10 text-4xl font-bold">Let's Talk</h1>
+      <div class="main-box">
+        <div class="contact-img">
+          <img class="c-image" src="Images/lets-talk.png" />
+        </div>
+        <div class="description text-white">
+          I'm passionate about web and game development and would love to look
+          into opportunities where I can help out and grow in these exciting
+          fields. Whether you are looking for a full-time expert, a partner to
+          collaborate on your next project, or freelance expertise, I would love
+          to connect with you. Let's create something amazing together!
+        </div>
+        <div class="social-btns">
+          <a class="contact-btns" href="mailto:coderraj2005@gmail.com"
+            ><i class="fas fa-envelope"></i> Email</a
+          >
+          <a
+            class="contact-btns text-blue-400"
+            href="https://www.linkedin.com/in/raj-rai-8445042ba/"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a class="contact-btns" href="https://x.com/LairesuRai"
+            ><i class="fa-brands fa-x-twitter"></i> Twitter
+          </a>
+          <a class="contact-btns" href="https://github.com/Lairesu"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- navigation bar -->
 
     <!-- Navigation Bar -->
     <nav
-      class="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-60 backdrop-blur-lg shadow-md z-50"
+      class="animate slideInBottom fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-60 backdrop-blur-lg shadow-md z-50"
     >
-      <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
-      <a href="#section2" class="nav-link"><i class="fas fa-user"></i></a>
-      <a href="#section3" class="nav-link"><i class="fas fa-briefcase"></i></a>
-      <a href="#section4" class="nav-link"><i class="fas fa-envelope"></i></a>
-      <a href="#" class="nav-link"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="nav-link"><i class="fab fa-github"></i></a>
-
-      <button id="theme-toggle" class="theme-toggle nav-link">
-        <i id="theme-icon" class="fa fa-moon"></i>
-        <!-- Default to moon(dark mode) icon -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
       </button>
+      <div class="nav-links">
+        <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
+        <a href="#section3" class="nav-link"><i class="fas fa-user"></i></a>
+        <a href="#section4" class="nav-link"
+          ><i class="fas fa-briefcase"></i
+        ></a>
+        <a href="#section5" class="nav-link"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Lairesu" class="nav-link"
+          ><i class="fab fa-github"></i
+        ></a>
+
+        <button id="theme-toggle" class="theme-toggle nav-link">
+          <i id="theme-icon" class="fa fa-moon"></i>
+          <!-- Default to moon(dark mode) icon -->
+        </button>
+      </div>
     </nav>
 
     <script src="js/scripts.js"></script>

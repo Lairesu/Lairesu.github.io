@@ -51,7 +51,7 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light") {
   enableLightMode();
 } else {
-  enableDarkMode();  // Default mode
+  enableDarkMode(); // Default mode
 }
 
 // event listener for the theme toggle button click
@@ -62,3 +62,79 @@ themeToggleButton.addEventListener("click", () => {
     enableDarkMode();
   }
 });
+
+// nav-bar toggle
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+const body = document.body; // Detect clicks on the body
+
+// Toggle the menu when the nav-toggle button is clicked
+navToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevent the click from propagating to the body
+  navLinks.classList.toggle("show");
+});
+
+// Close the menu if the user clicks outside of the nav links or nav-toggle
+body.addEventListener("click", (e) => {
+  // If the click is outside the nav links and nav-toggle button
+  if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+    navLinks.classList.remove("show");
+  }
+});
+
+// modal
+document.addEventListener("click", function (e) {
+  const target = e.target.closest("[data-modal-target]");
+  if (target) {
+    const modalId = target.getAttribute("data-modal-target");
+    const modal = document.getElementById(modalId);
+    modal.classList.remove("invisible", "opacity-0", "pointer-events-none");
+    modal.classList.add("visible", "opacity-100", "pointer-events-auto");
+  }
+});
+
+// close modal
+document.addEventListener("click", function (e) {
+  const closeBtn = e.target.closest(".close-modal");
+  if (closeBtn) {
+    const modal = closeBtn.closest(".modal");
+    modal.classList.remove("visible", "opacity-100", "pointer-events-auto");
+    modal.classList.add("invisible", "opacity-0", "pointer-events-none");
+  }
+
+  const backgroundClick =
+    e.target.classList.contains("fixed") && !e.target.closest(".bg-white");
+  if (backgroundClick) {
+    e.target.classList.add("invisible", "opacity-0", "pointer-events-none");
+    e.target.classList.remove("visible", "opacity-100", "pointer-events-auto");
+  }
+});
+
+// animation on section loading
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // When the section is in view, add 'visible' to start the animation
+          entry.target.classList.add("visible");
+          entry.target.classList.remove("invisible");
+        } else {
+          // When the section is out of view, reset it to invisible
+          entry.target.classList.remove("visible");
+          entry.target.classList.add("invisible");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ); // Trigger when 50% of the element is visible
+
+  elementsToAnimate.forEach((element) => {
+    // Initially mark all sections as invisible
+    element.classList.add("invisible");
+    observer.observe(element); // Start observing
+  });
+});
+
