@@ -137,3 +137,4 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(element); // Start observing
   });
 });
+
