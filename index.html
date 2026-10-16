@@ -4,465 +4,286 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raj Rai</title>
+
+    <!-- TEMPORARY: kept only so the icons still show. Removed in the icon step. -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chicle&family=Italianno&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" type="text/css" href="builds/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/src/animation.css" />
-    <link rel="stylesheet" type="text/css" href="/src/responsive.css" />
+    <link rel="stylesheet" href="builds/css/style.css" />
+    
   </head>
 
-  <body class="scroll-smooth">
-    <section
-      id="section1"
-      class="h-screen flex items-center justify-center animate-fade-in"
-    >
-      <div class="animate slideInLeft intro text-white bg-gray-900">
-        <div class="max-w-2xl">
-          <p class="text-lg mb-4 text-gray-300">Hello There,</p>
-          <h1 class="text-5xl font-extrabold mb-2">I'm Raj Rai</h1>
-          <h3 class="text-2xl font-semibold mb-6">A Passionate Programmer</h3>
-          <p class="text-lg text-gray-400">
-           I'm 19 year old self taught Programmer.  With years of experience as programming,
-           I been programming since i was in grade 10. currently i am in denmark taking computer science course
-          </p>
-          <!-- social links -->
-          <div class="social-links">
-            <div class="line"></div>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              class="social-button"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/raj-rai-8445042ba/"
-              target="_blank"
-              class="social-button"
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://x.com/LairesuRai"
-              target="_blank"
-              class="social-button"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <div class="line"></div>
-          </div>
-        </div>
+  <body>
+    <!-- ========== SECTION 1: INTRO ========== -->
+    <section id="section1" class="animate-fade-in">
+      <div>
+        <p>Hello There,</p>
+        <h1>I'm Raj Rai</h1>
+        <h3>A Passionate Programmer</h3>
+        <p>
+          I'm a 19 year old self-taught programmer. I've been programming since
+          grade 10, and I'm currently studying computer science in Denmark.
+        </p>
 
-        <!-- img -->
-        <div class="animate slideInRight img">
-          <img src="Images/raj.png" alt="Raj Rai" />
+        <div>
+          <a href="https://facebook.com" target="_blank" rel="noopener">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/raj-rai-8445042ba/"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com/LairesuRai" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
         </div>
       </div>
-      <!-- end of intro -->
+
+      <img src="Images/raj.png" alt="Raj Rai" />
     </section>
 
-    <section id="section2" class="h-screen">
-      <p class="heading text-gray-200">MY TECH STACKS</p>
-      <p class="explain text-gray-300">
-        These are the technologies I am proficient at and use them to
-        meticulously transform my innovative ideas into impactful and
-        high-quality digital solutions.
+    <!-- ========== SECTION 2: TECH STACK ========== -->
+    <section id="section2">
+      <h2>MY TECH STACKS</h2>
+      <p>
+        These are the technologies I am proficient at and use to transform my
+        ideas into impactful, high-quality digital solutions.
       </p>
 
-      <div
-        class="skills grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5"
-      >
-        <button class="skill-button" data-modal-target="frontendModal">
-          <img class="tech-img" src="Images/frontend.png" alt="Frontend" />
-          <p class="Head">Frontend</p>
+      <div>
+        <button data-modal-target="frontendModal">
+          <img src="Images/frontend.png" alt="" />
+          <p>Frontend</p>
         </button>
-        <button class="skill-button" data-modal-target="backendModal">
-          <img class="tech-img" src="Images/backend.png" alt="Frontend" />
-          <p class="Head">Backend</p>
+        <button data-modal-target="backendModal">
+          <img src="Images/backend.png" alt="" />
+          <p>Backend</p>
         </button>
-        <button class="skill-button" data-modal-target="databaseModal">
-          <img class="tech-img" src="Images/database.png" alt="Databases" />
-          <p class="Head">Databases</p>
+        <button data-modal-target="databaseModal">
+          <img src="Images/database.png" alt="" />
+          <p>Databases</p>
         </button>
-        <button class="skill-button" data-modal-target="languagesModal">
-          <img class="tech-img" src="Images/coding.png" alt="other Languages" />
-          <p class="Head">Languages</p>
+        <button data-modal-target="languagesModal">
+          <img src="Images/coding.png" alt="" />
+          <p>Languages</p>
         </button>
-        <button class="skill-button" data-modal-target="miscsModal">
-          <img class="tech-img" src="Images/miscs.png" alt="other Languages" />
-          <p class="Head">Miscs</p>
+        <button data-modal-target="miscsModal">
+          <img src="Images/miscs.png" alt="" />
+          <p>Miscs</p>
         </button>
-        <button class="skill-button" data-modal-target="LearningModal">
-          <img
-            class="tech-img"
-            src="Images/learning.png"
-            alt="other Languages"
-          />
-          <p class="Head">Learning</p>
+        <button data-modal-target="LearningModal">
+          <img src="Images/learning.png" alt="" />
+          <p>Learning</p>
         </button>
       </div>
 
-      <!-- Modals -->
-      <!-- Frontend Modal -->
-      <div
-        id="frontendModal"
-        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
-      >
-        <div class="tech-list bg-white shadow-md max-w-sm w-full">
-          <div class="header px-2 py-2 bg-blue-600">
-            <div class="header-left">
-              <img class="tech-img" src="Images/frontend.png" alt="Frontend" />
-              <h2 class="brand-name text-lg font-bold mb-4">Frontend</h2>
-            </div>
-            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+      <!-- Frontend -->
+      <div id="frontendModal" class="modal">
+        <div>
+          <div>
+            <img src="Images/frontend.png" alt="" />
+            <h3>Frontend</h3>
+            <button class="close-modal">X</button>
           </div>
-          <div class="tech-btns">
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/html.png" alt="html" class="tech-icon" />
-              <span>HTML</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/css-3.png" alt="css" class="tech-icon" />
-              <span>CSS3</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/js.png" alt="JavaScript" class="tech-icon" />
-              <span>JavaScript</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img
-                src="Images/bootstrap.png"
-                alt="bootstrap"
-                class="tech-icon"
-              />
-              <span>Bootstrap</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/tailwind.png" alt="tailwind" class="tech-icon" />
-              <span>Tailwind</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/reactjs.png" alt="react" class="tech-icon" />
-              <span>React.js</span>
-            </button>
-          </div>
+          <ul>
+            <li><img src="Images/html.png" alt="" /> HTML</li>
+            <li><img src="Images/css-3.png" alt="" /> CSS3</li>
+            <li><img src="Images/js.png" alt="" /> JavaScript</li>
+            <li><img src="Images/bootstrap.png" alt="" /> Bootstrap</li>
+            <li><img src="Images/tailwind.png" alt="" /> Tailwind</li>
+            <li><img src="Images/reactjs.png" alt="" /> React.js</li>
+          </ul>
         </div>
       </div>
 
-      <!-- backend -->
-      <div
-        id="backendModal"
-        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
-      >
-        <div class="tech-list bg-white shadow-md max-w-sm w-full">
-          <div class="header px-2 py-2 bg-green-700">
-            <div class="header-left">
-              <img class="tech-img" src="Images/backend.png" alt="Backend" />
-              <h2 class="brand-name text-lg font-bold mb-4">Backend</h2>
-            </div>
-            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+      <!-- Backend -->
+      <div id="backendModal" class="modal">
+        <div>
+          <div>
+            <img src="Images/backend.png" alt="" />
+            <h3>Backend</h3>
+            <button class="close-modal">X</button>
           </div>
-          <div class="tech-btns">
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/django.svg" alt="django" class="tech-icon" />
-              <span>Django</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img
-                src="Images/flask.svg"
-                alt="flask"
-                class="tech-icon text-white"
-              />
-              <span>Flask</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/node-js.svg" alt="nodejs" class="tech-icon" />
-              <span>Node.js</span>
-            </button>
-          </div>
+          <ul>
+            <li><img src="Images/django.svg" alt="" /> Django</li>
+            <li><img src="Images/flask.svg" alt="" /> Flask</li>
+            <li><img src="Images/node-js.svg" alt="" /> Node.js</li>
+          </ul>
         </div>
       </div>
 
-      <!-- database -->
-      <div
-        id="databaseModal"
-        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
-      >
-        <div class="tech-list bg-white shadow-md max-w-sm w-full">
-          <div class="header px-2 py-2 bg-yellow-500">
-            <div class="header-left">
-              <img class="tech-img" src="Images/database.png" alt="Databases" />
-              <h2 class="brand-name text-lg font-bold mb-4">Databases</h2>
-            </div>
-            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+      <!-- Databases -->
+      <div id="databaseModal" class="modal">
+        <div>
+          <div>
+            <img src="Images/database.png" alt="" />
+            <h3>Databases</h3>
+            <button class="close-modal">X</button>
           </div>
-          <div class="tech-btns">
-            <button class="tech-btn flex items-center space-x-2">
-              <img
-                src="Images/postgresql.svg"
-                alt="postgresql"
-                class="tech-icon"
-              />
-              <span>PostgreSQL</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/sqlite.svg" alt="SQLite3" class="tech-icon" />
-              <span>SQLite3</span>
-            </button>
-          </div>
+          <ul>
+            <li><img src="Images/postgresql.svg" alt="" /> PostgreSQL</li>
+            <li><img src="Images/sqlite.svg" alt="" /> SQLite3</li>
+          </ul>
         </div>
       </div>
 
       <!-- Languages -->
-      <div
-        id="languagesModal"
-        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
-      >
-        <div class="tech-list bg-white shadow-md max-w-sm w-full">
-          <div class="header px-2 py-2 bg-red-500">
-            <div class="header-left">
-              <img
-                class="tech-img"
-                src="Images/coding.png"
-                alt="other Languages"
-              />
-              <h2 class="brand-name text-lg font-bold mb-4">Languages</h2>
-            </div>
-            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+      <div id="languagesModal" class="modal">
+        <div>
+          <div>
+            <img src="Images/coding.png" alt="" />
+            <h3>Languages</h3>
+            <button class="close-modal">X</button>
           </div>
-          <div class="tech-btns">
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/python.svg" alt="python" class="tech-icon" />
-              <span>python</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/c-original.svg" alt="C" class="tech-icon" />
-              <span>C</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/c++.svg" alt="C++" class="tech-icon" />
-              <span>C++</span>
-            </button>
-             <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/Go.svg" alt="Golang" class="tech-icon" />
-              <span>Golang</span>
-            </button>
-          </div>
+          <ul>
+            <li><img src="Images/python.svg" alt="" /> Python</li>
+            <li><img src="Images/c-original.svg" alt="" /> C</li>
+            <li><img src="Images/c++.svg" alt="" /> C++</li>
+            <li><img src="Images/Go.svg" alt="" /> Golang</li>
+          </ul>
         </div>
       </div>
 
       <!-- Miscs -->
-      <div
-        id="miscsModal"
-        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
-      >
-        <div class="tech-list bg-white shadow-md max-w-sm w-full">
-          <div class="header px-2 py-2 bg-blue-500">
-            <div class="header-left">
-              <img
-                class="tech-img"
-                src="Images/miscs.png"
-                alt="Miscellaneous"
-              />
-              <h2 class="brand-name text-lg font-bold mb-4">Miscs</h2>
-            </div>
-            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+      <div id="miscsModal" class="modal">
+        <div>
+          <div>
+            <img src="Images/miscs.png" alt="" />
+            <h3>Miscs</h3>
+            <button class="close-modal">X</button>
           </div>
-          <div class="tech-btns">
-            <button class="tech-btn flex items-center space-x-2">
-              <img
-                src="Images/visual-studio-code.svg"
-                alt="Vscode"
-                class="tech-icon"
-              />
-              <span>Visual Studio</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/pycharm.svg" alt="pycharm" class="tech-icon" />
-              <span>Pycharm</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/asperite.svg" alt="asperite" class="tech-icon" />
-              <span>Asperite</span>
-            </button>
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/blender.svg" alt="blender" class="tech-icon" />
-            <span>Blender</span>
-            </button>
-          </div>
+          <ul>
+            <li><img src="Images/visual-studio-code.svg" alt="" /> Visual Studio Code</li>
+            <li><img src="Images/pycharm.svg" alt="" /> PyCharm</li>
+            <li><img src="Images/asperite.svg" alt="" /> Aseprite</li>
+            <li><img src="Images/blender.svg" alt="" /> Blender</li>
+          </ul>
         </div>
       </div>
 
       <!-- Learning -->
-      <div
-        id="LearningModal"
-        class="modal invisible opacity-0 pointer-events-none fixed inset-0 bg-opacity-50 flex items-center justify-center transition-opacity duration-300"
-      >
-        <div class="tech-list bg-white shadow-md max-w-sm w-full">
-          <div class="header px-2 py-2 bg-blue-700">
-            <div class="header-left">
-              <img class="tech-img" src="Images/learning.png" alt="learning" />
-              <h2 class="brand-name text-lg font-bold mb-4">Learning</h2>
-            </div>
-            <button class="close-modal text-white text-lg px-4 py-5">X</button>
+      <div id="LearningModal" class="modal">
+        <div>
+          <div>
+            <img src="Images/learning.png" alt="" />
+            <h3>Learning</h3>
+            <button class="close-modal">X</button>
           </div>
-          <div class="tech-btns">
-          
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/MongoDB.svg" alt="MongoDB" class="tech-icon" />
-              <span>MongoDB</span>
-            </button>
-
-            <button class="tech-btn flex items-center space-x-2">
-              <img src="Images/godot.svg" alt="godot" class="tech-icon" />
-              <span>Godot</span>
-            </button>
-          </div>
+          <ul>
+            <li><img src="Images/MongoDB.svg" alt="" /> MongoDB</li>
+            <li><img src="Images/Godot.svg" alt="" /> Godot</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- section3 -->
-    <section id="section3" class="h-screen animate-fade-in">
-      <h1 class="heading text-white">About Me</h1>
-      <div class="my-box">
-        <p class="about-myself">
-          I was first introduced to computers at a very young age, and my curiosity only grew as I explored them. I started programming back in tenth grade, purely for fun. What began as a hobby—developing games, websites, and applications—quickly became my driving force.</br>
-          Over time, I realized that coding didn’t have to remain just a pastime. By the end of high school, I decided to pursue Software Development professionally, committing myself to building my skills and growing in this field.
-        </p>
-        <div class="rand-img">
-          <img src="Images/new.jpg" />
+    <!-- ========== SECTION 3: ABOUT ========== -->
+    <section id="section3" class="animate-fade-in">
+      <h2>About Me</h2>
+      <p>
+        I was first introduced to computers at a very young age, and my
+        curiosity only grew as I explored them. I started programming back in
+        tenth grade, purely for fun. What began as a hobby (developing games,
+        websites, and applications) quickly became my driving force.
+      </p>
+      <p>
+        Over time, I realized that coding didn't have to remain just a pastime.
+        By the end of high school, I decided to pursue software development
+        professionally, committing myself to building my skills and growing in
+        this field.
+      </p>
+      <figure>
+        <img src="Images/new.jpg" alt="Treetops against a blue sky" />
+        <figcaption>
           <a
             href="https://unsplash.com/photos/the-tops-of-trees-against-a-blue-sky-mEKxZagJ9J8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            class="unsplash"
-            >Image-Source: Unsplash</a
+            target="_blank"
+            rel="noopener"
+            >Image source: Unsplash</a
           >
-        </div>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ========== SECTION 4: PROJECTS ========== -->
+    <section id="section4">
+      <h2>My Works</h2>
+
+      <article>
+        <img src="Images/projects/Blog.png" alt="HackTales screenshot" />
+        <h3>HackTales</h3>
+        <p>A blog website / web app</p>
+        <a href="https://github.com/Lairesu/Blog-Application">
+          Source Code <i class="fab fa-github"></i>
+        </a>
+      </article>
+
+      <article>
+        <img src="Images/projects/sort.gif" alt="Sorting visualizer demo" />
+        <h3>Algorithm Sorter</h3>
+        <p>Python, Pygame</p>
+        <a
+          href="https://github.com/Lairesu/Sorting-Algorithm-Visualizer?tab=readme-ov-file"
+        >
+          Source Code <i class="fab fa-github"></i>
+        </a>
+      </article>
+
+      <article>
+        <img src="Images/projects/cs50-final.png" alt="CodeFlow screenshot" />
+        <h3>CodeFlow</h3>
+        <p>CS50 final project using Flask</p>
+        <a href="https://github.com/Lairesu/final-project-2024">
+          Source Code <i class="fab fa-github"></i>
+        </a>
+      </article>
+    </section>
+
+    <!-- ========== SECTION 5: CONTACT ========== -->
+    <section id="section5">
+      <h2>Let's Talk</h2>
+      <img src="Images/lets-talk.png" alt="" />
+      <p>
+        I'm passionate about web and game development and would love to look
+        into opportunities where I can help out and grow in these exciting
+        fields. Whether you are looking for a full-time developer, a partner to
+        collaborate on your next project, or freelance help, I would love to
+        connect with you. Let's create something amazing together!
+      </p>
+      <div>
+        <a href="mailto:coderraj2005@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/raj-rai-8445042ba/">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://x.com/LairesuRai">
+          <i class="fa-brands fa-x-twitter"></i> Twitter
+        </a>
+        <a href="https://github.com/Lairesu">
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </section>
 
-    <section id="section4" class="h-screen">
-      <h1 class="heading text-white">My Works</h1>
-
-      <div class="Card-box bg-gray-900">
-        <div class="cards">
-          <div class="project-imgs">
-            <img class="project-img" src="Images/projects/Blog.png" />
-          </div>
-          <div class="about-project">
-            <div class="project-description">
-              <h2 class="text-white">HackTales</h2>
-              <h3 class="text-gray-200">A Blog Website/Web App</h3>
-              <a
-                href="https://github.com/Lairesu/Blog-Application"
-                class="github-link text-teal-400"
-                >Source Code <i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cards">
-          <div class="project-imgs">
-            <img class="project-img" src="Images/projects/sort.gif" />
-          </div>
-          <div class="about-project">
-            <div class="project-description">
-              <h2 class="text-white">Algorithm Sorter</h2>
-              <h3 class="text-gray-200">Python, Pygame</h3>
-              <a
-                href="https://github.com/Lairesu/Sorting-Algorithm-Visualizer?tab=readme-ov-file"
-                class="github-link text-teal-400"
-                >Source Code <i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cards">
-          <div class="project-imgs">
-            <img class="project-img" src="Images/projects/cs50-final.png" />
-          </div>
-          <div class="about-project">
-            <div class="project-description">
-              <h2 class="text-white">CodeFlow</h2>
-              <h3 class="text-gray-200">Cs50 final Project using Flask</h3>
-              <a
-                href="https://github.com/Lairesu/final-project-2024"
-                class="github-link text-teal-400"
-                >Source Code <i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="section5" class="h-screen">
-      <h1 class="heading text-white py-10 text-4xl font-bold">Let's Talk</h1>
-      <div class="main-box">
-        <div class="contact-img">
-          <img class="c-image" src="Images/lets-talk.png" />
-        </div>
-        <div class="description text-white">
-          I'm passionate about web and game development and would love to look
-          into opportunities where I can help out and grow in these exciting
-          fields. Whether you are looking for a full-time expert, a partner to
-          collaborate on your next project, or freelance expertise, I would love
-          to connect with you. Let's create something amazing together!
-        </div>
-        <div class="social-btns">
-          <a class="contact-btns" href="mailto:coderraj2005@gmail.com"
-            ><i class="fas fa-envelope"></i> Email</a
-          >
-          <a
-            class="contact-btns text-blue-400"
-            href="https://www.linkedin.com/in/raj-rai-8445042ba/"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <a class="contact-btns" href="https://x.com/LairesuRai"
-            ><i class="fa-brands fa-x-twitter"></i> Twitter
-          </a>
-          <a class="contact-btns" href="https://github.com/Lairesu"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- navigation bar -->
-
-    <!-- Navigation Bar -->
-    <nav
-      class="animate slideInBottom fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-60 backdrop-blur-lg shadow-md z-50"
-    >
+    <!-- ========== NAVIGATION ========== -->
+    <nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="nav-links">
-        <a href="#section1" class="nav-link"><i class="fas fa-home"></i></a>
-        <a href="#section3" class="nav-link"><i class="fas fa-user"></i></a>
-        <a href="#section4" class="nav-link"
-          ><i class="fas fa-briefcase"></i
-        ></a>
-        <a href="#section5" class="nav-link"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/Lairesu" class="nav-link"
-          ><i class="fab fa-github"></i
-        ></a>
-
-        <button id="theme-toggle" class="theme-toggle nav-link">
+        <a href="#section1" class="nav-link" aria-label="Home"><i class="fas fa-home"></i></a>
+        <a href="#section3" class="nav-link" aria-label="About"><i class="fas fa-user"></i></a>
+        <a href="#section4" class="nav-link" aria-label="Projects"><i class="fas fa-briefcase"></i></a>
+        <a href="#section5" class="nav-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Lairesu" class="nav-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <button id="theme-toggle" class="nav-link" aria-label="Toggle theme">
           <i id="theme-icon" class="fa fa-moon"></i>
-          <!-- Default to moon(dark mode) icon -->
         </button>
       </div>
     </nav>
