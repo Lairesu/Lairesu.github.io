@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Asperite", "darkmode", "imgs", "Pixelify", "rgba"]
+  "cSpell.words": [
+    "Asperite",
+    "darkmode",
+    "imgs",
+    "Pixelify",
+    "rgba"
+  ],
+  "liveServer.settings.port": 5501
 }

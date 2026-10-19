@@ -38,9 +38,14 @@ function render() {
     face.toggleAttribute("inert", !active);
     face.setAttribute("aria-hidden", String(!active));
   });
-  [...tabs.children].forEach((btn, i) =>
-    btn.classList.toggle("active", i === current)
-  );
+  [...tabs.children].forEach((btn, i) => {
+    btn.classList.toggle("active", i === current);
+    if (i === current) {
+      // centre the active tab in the (phone) tab row without scrolling the page
+      const left = btn.offsetLeft - (tabs.clientWidth - btn.offsetWidth) / 2;
+      tabs.scrollTo({ left, behavior: "smooth" });
+    }
+  });
 }
 
 function goTo(target) {
@@ -130,14 +135,31 @@ window.addEventListener("resize", () => {
   if (ctrlHeld || latched) fitOverview();
 });
 
-// touch swipe
+// touch swipe (ignores the controls bar and mostly-vertical drags, so
+// scrolling a page or the tab row never flips the carousel by accident)
 let startX = null;
-document.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
-document.addEventListener("touchend", (e) => {
-  if (startX === null) return;
-  const dx = e.changedTouches[0].clientX - startX;
-  if (Math.abs(dx) > 60) (dx < 0 ? next : prev)();
-  startX = null;
-});
+let startY = null;
+document.addEventListener(
+  "touchstart",
+  (e) => {
+    if (e.target.closest(".controls")) return (startX = null);
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  },
+  { passive: true }
+);
+document.addEventListener(
+  "touchend",
+  (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    startX = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      (dx < 0 ? next : prev)();
+    }
+  },
+  { passive: true }
+);
 
 render();

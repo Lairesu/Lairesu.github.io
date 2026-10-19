@@ -12,6 +12,6 @@ services:
   web:
     image: nginx:alpine
     ports:
-      - "8090:80" # haha my 8080 port is already taken by Pi-Hole
+      - "5500:80" # haha my 8080 port is already taken by Pi-Hole
     volumes:
       - .:/usr/share/nginx/html:ro

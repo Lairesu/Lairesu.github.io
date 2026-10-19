@@ -325,3 +325,106 @@ body.overview .face[data-flip="1"] { --flip: 180deg; }
 .contact-sub {
   @apply break-all text-sm text-gray-400;
 }
+
+/*
+   RESPONSIVE / PHONE FIXES
+*/
+
+html { -webkit-text-size-adjust: 100%; }
+
+:root { --controls-h: 4.5rem; }
+
+.scene { inset: 0 0 var(--controls-h) 0; }
+
+/* swipe sideways = flip pages, swipe up/down = scroll the page you're on */
+.face {
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+}
+
+.tech span,
+.tech small { overflow-wrap: anywhere; }
+
+/* ---------- phones & small tablets ---------- */
+@media (max-width: 767px) {
+  :root {
+    --controls-h: calc(6.75rem + env(safe-area-inset-bottom, 0px));
+    --face-w: 94vw;
+    --face-h: calc(100vh - var(--controls-h) - 1rem);   /* fallback */
+  }
+  @supports (height: 100dvh) {
+    :root { --face-h: calc(100dvh - var(--controls-h) - 1rem); }
+  }
+
+  .face {
+    padding: 1.25rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .info-box,
+  .stack-group { padding: 1rem; }
+
+  .cert img { height: 9rem; }
+
+  /* controls: one full-width bar at the bottom
+     row 1 = scrollable page tabs, row 2 = prev / overview / next */
+  .controls {
+    left: 0;
+    bottom: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(0, 0, 0, 0.88);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .controls button {
+    min-height: 2.5rem;
+    white-space: nowrap;
+  }
+
+  #tabs {
+    order: 0;
+    flex: 1 0 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #tabs::-webkit-scrollbar { display: none; }
+  #tabs button { flex: none; padding: 0.4rem 0.9rem; }
+
+  #prev     { order: 1; flex: 1; }
+  #overview { order: 2; flex: 2; }
+  #next     { order: 3; flex: 1; }
+}
+
+/* ---------- phone held sideways: very little height ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  :root {
+    --controls-h: 3.25rem;
+    --face-w: min(96vw, 1240px);
+    --face-h: calc(100vh - var(--controls-h) - 0.5rem);
+  }
+  @supports (height: 100dvh) {
+    :root { --face-h: calc(100dvh - var(--controls-h) - 0.5rem); }
+  }
+  .controls {
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background: none;
+    border-top: 0;
+    padding: 0.25rem 0;
+  }
+  .controls button { min-height: 2.25rem; }
+  #tabs { display: none; }
+  #prev, #overview, #next { order: 0; flex: none; }
+  .face { padding: 1rem 1.25rem; }
+}
