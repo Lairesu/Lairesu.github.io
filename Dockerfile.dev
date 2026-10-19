@@ -1,0 +1,9 @@
+FROM node:22-alpine
+
+# tools live here, outside my project
+WORKDIR /tools
+RUN npm install tailwindcss@3.4.17
+ENV PATH="/tools/node_modules/.bin:$PATH"
+
+# my project gets mounted here
+WORKDIR /app

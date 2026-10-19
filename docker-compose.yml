@@ -1,0 +1,17 @@
+services:
+  css:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    user: "1000:1000"
+    tty: true            # Tailwind's --watch exits in Docker without this
+    volumes:
+      - .:/app
+    command: tailwindcss -i ./src/input.css -o ./builds/css/style.css --watch
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8090:80" # haha my 8080 port is already taken by Pi-Hole
+    volumes:
+      - .:/usr/share/nginx/html:ro
