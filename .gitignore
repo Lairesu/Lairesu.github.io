@@ -1,0 +1,12 @@
+# Dependencies (not used now, but in case Node ever lands here)
+node_modules/
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and secrets
+*.log
+.env
