@@ -23,6 +23,12 @@ faces.forEach((face, i) => {
   tabs.appendChild(btn);
 });
 
+// Puts every page in its place for the current index.
+// In short:
+//   current = index wrapped into 0..total-1
+//   for each page -> mark active, store its distance from the front,
+//                    flip it if it faces away, hide it from keyboard/screen readers unless active
+//   highlight the matching tab and slide it into view
 function render() {
   stage.style.setProperty("--i", index);
   const current = ((index % total) + total) % total;
@@ -48,6 +54,8 @@ function render() {
   });
 }
 
+// Spins to a page the short way round.
+// In short: diff = target - current, wrap it into -total/2..total/2, add to index, render
 function goTo(target) {
   const current = ((index % total) + total) % total;
   let diff = target - current;
@@ -62,7 +70,7 @@ const prev = () => { index -= 1; render(); };
 document.getElementById("next").addEventListener("click", next);
 document.getElementById("prev").addEventListener("click", prev);
 
-// ---------------- overview (open-box view) ----------------
+// Overview (the open-box view)
 // overview is ON when Ctrl is held OR the Overview button is latched on
 let ctrlHeld = false;
 let latched = false;
@@ -71,6 +79,10 @@ const cssNum = (name) =>
   parseFloat(getComputedStyle(document.documentElement).getPropertyValue(name));
 
 // work out how far to pull the camera back so the whole open box fits the screen
+// In short:
+//   measure the ring's outer size when tilted and folded open
+//   scale = whichever is smaller: screen width / box width, screen height / box height (max 0.8)
+//   turn that scale into a camera pull-back distance (--fit-pull)
 function fitOverview() {
   const w = rig.offsetWidth;
   const h = rig.offsetHeight;
@@ -104,7 +116,9 @@ function applyOverview() {
 }
 
 // always trust the browser's own "is Ctrl down right now" flag,
-// so overview can never get stuck on
+// so overview can never get stuck on.
+// In short: if Ctrl changed since last time -> remember it and redraw, else do nothing
+// (pointermove calls this a lot, but it only touches the page when Ctrl actually changes)
 const syncCtrl = (e) => {
   if (ctrlHeld !== e.ctrlKey) {
     ctrlHeld = e.ctrlKey;
@@ -131,8 +145,19 @@ overviewBtn.addEventListener("click", () => {
   applyOverview();
 });
 
+// Resizing fires dozens of events a second, and fitOverview reads layout every
+// time. So only the last resize before the next frame does any work.
+// In short:
+//   on resize -> if a frame is already booked, do nothing
+//                else book one frame: then refit if overview is on
+let resizeQueued = false;
 window.addEventListener("resize", () => {
-  if (ctrlHeld || latched) fitOverview();
+  if (resizeQueued) return;
+  resizeQueued = true;
+  requestAnimationFrame(() => {
+    resizeQueued = false;
+    if (ctrlHeld || latched) fitOverview();
+  });
 });
 
 // touch swipe (ignores the controls bar and mostly-vertical drags, so

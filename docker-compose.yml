@@ -7,7 +7,8 @@ services:
     tty: true            # Tailwind's --watch exits in Docker without this
     volumes:
       - .:/app
-    command: tailwindcss -i ./src/input.css -o ./builds/css/style.css --watch
+    # --minify: the built CSS is what GitHub Pages serves, so keep it small
+    command: tailwindcss -i ./src/input.css -o ./builds/css/style.css --watch --minify
 
   web:
     image: nginx:alpine

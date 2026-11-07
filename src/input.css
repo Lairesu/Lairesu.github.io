@@ -249,7 +249,9 @@ body.overview .face[data-flip="1"] { --flip: 180deg; }
 .tl-right .tl-card::after { left: -4rem; }
 
 .tl-img {
-  @apply flex h-40 items-center justify-center rounded-2xl border-2
+  /* w-auto: the width/height attributes in the HTML only reserve space while
+     the image loads; the real width still follows the 10rem height */
+  @apply flex h-40 w-auto items-center justify-center rounded-2xl border-2
     border-gray-500 bg-gray-800 text-sm text-gray-500;
 }
 .tl-date  { @apply mt-3 text-sm text-teal-400; }
